@@ -1,12 +1,13 @@
 {
-  "name": "ssc",
+  "name": "the_name_of_the_function",
   "version": "1.0.0",
-  "description": "Example of Slack Slash Command Delayed Response",
+  "description": "Example of claudia-bot-builder, used to connect one or more services, and Deleayed Responses in Slack Slash Command",
   "main": "bot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "create": "claudia create --api-module bot --region us-east-1 --timeout 120 --allow-recursion --configure-slack-slash-command",
-    "update": "claudia update"
+    "create": "claudia create --api-module bot --region us-east-1 --timeout 120 --allow-recursion",
+    "update": "claudia update",
+    "update-slack-slash-command": "claudia update --configure-slack-slash-command"
   },
   "keywords": [
     "bot",
@@ -18,6 +19,7 @@
   "dependencies": {
     "aws-sdk": "^2.49.0",
     "claudia-bot-builder": "^2.15.0",
+    "lodash": "^4.17.4",
     "promise-delay": "^2.1.0"
   }
 }
